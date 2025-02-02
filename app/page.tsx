@@ -1,10 +1,31 @@
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        Here I will build my webpage.
+    <div className="min-h-screen p-8 pb-20 sm:p-20 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white">
+      <main className="flex flex-col gap-8 items-center sm:items-start">
+      <h1 className="text-4xl font-bold text-center sm:text-left">
+        Hey, I&apos;m Mykhailo
+      </h1>
+      <p className="text-lg text-center sm:text-left">
+        I&apos;m a software engineer, currently working at{" "}
+        <a href="https://www.ericsson.com" className="text-blue-400">Ericsson</a>.
+      </p>
+      <p className="text-lg text-center sm:text-left">
+        Check out my projects on{" "}
+        <a href="https://github.com/MykhailoKondrat" className="text-blue-400">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" className="inline-block w-6 h-6 mr-2 invert" />
+        </a>
+      </p>
+      <p className="text-lg text-center sm:text-left">
+        This website is still under construction.
+      </p>
+      <p className="text-lg text-center sm:text-left">
+        Feel free to reach out via email at{" "}
+        <a href="mailto:mykhailo.kondrat@gmail.com" className="text-blue-400">
+          mykhailo.kondrat@gmail.com
+        </a>.
+      </p>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+      <footer className="flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
   );
 }
