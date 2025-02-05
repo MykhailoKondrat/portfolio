@@ -1,3 +1,4 @@
+import { Card } from '@/app/components/Card';
 export default function Home() {
   return (
     <div className="min-h-screen p-8 pb-20 sm:p-20 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white">
@@ -31,7 +32,17 @@ export default function Home() {
       >
         Download Resume
       </a>
+      <div className="relative group w-32 h-32 bg-blue-500">
+        <div className="absolute inset-0 bg-blue-500 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"></div>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-4 w-full">
+        <Card  >test</Card>
+        <Card  >test</Card>
+      </div>
       </main>
+      
+
       <footer className="flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
   );
