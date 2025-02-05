@@ -34,6 +34,9 @@
 		"**/*.{ts,tsx,js,jsx}": [
 			"eslint --fix",
 			"prettier --write"
+		],
+		"**/*.{ts,tsx}": [
+			"bash -c 'npx tsc --noEmit'"
 		]
 	}
 }
