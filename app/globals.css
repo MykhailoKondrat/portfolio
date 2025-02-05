@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: 255, 204, 255; /* Light mode (white) */
+	--foreground: 23, 23, 23; /* Dark text */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: 0, 0, 0; /* Dark mode (black) */
+	--foreground: 255, 0, 0; /* Light text */
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	background: rgb(var(--background));
+	color: rgb(var(--foreground));
+	transition:
+		background 0.3s ease,
+		color 0.3s ease;
 }

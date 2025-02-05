@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-card {
+    /* background: linear-gradient(darkblue, darkblue) padding-box,
+      linear-gradient(to top, white, white) border-box; */
+    /* border-radius: 10px; */
+    @apply w-full h-full rounded-lg bg-background;
+    border: 1px solid transparent;
+  }
+}
