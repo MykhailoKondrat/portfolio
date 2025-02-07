@@ -8,7 +8,7 @@
 }
 
 .dark {
-  --background: 0, 0, 0; /* Dark mode (black) */
+	--background: 0, 0, 0; /* Dark mode (black) */
 	--foreground: 255, 0, 0; /* Light text */
 }
 

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.custom-avatar {
+		position: relative;
+		border-radius: 800px;
+		width: 300px;
+		height: 300px;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		background:
+			url('/avatar-no-bg.png') no-repeat center center / 125%,
+			linear-gradient(
+					135deg,
+					rgba(255, 255, 255, 0.1),
+					rgba(255, 255, 255, 0.3),
+					rgba(255, 255, 255, 0.1)
+				)
+				no-repeat center center;
+		background-size: contain, cover;
+	}
+	.custom-avatar-border {
+		width: 302px;
+		height: 302px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, purple, green);
+	}
+}
