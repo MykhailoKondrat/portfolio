@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Merriweather_Sans } from 'next/font/google';
+import { Geist, Geist_Mono, Merriweather } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/core';
 
@@ -12,10 +12,9 @@ const geistMono = Geist_Mono({
 	variable: '--font-geist-mono',
 	subsets: ['latin'],
 });
-const merriweather = Merriweather_Sans({
-	variable: '--font-merriweather',
+export const merriweather = Merriweather({
 	subsets: ['latin'],
-	weight: 'variable',
+	weight: '700',
 });
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -30,9 +29,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} ${merriweather.className}antialiased bg-background`}
 			>
-				<ThemeProvider>{children}</ThemeProvider>
+				<div className="max-w-[75%] mx-auto">
+					<ThemeProvider>{children}</ThemeProvider>
+				</div>
 			</body>
 		</html>
 	);

@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-	--background: 255, 204, 255; /* Light mode (white) */
-	--foreground: 23, 23, 23; /* Dark text */
+	--background: 255, 255, 255; /* Light mode (white) */
+	--foreground: 30, 30, 35; /* Dark text */
+	--accent: 249, 115, 22; /* Orange accent same for both */
 }
 
 .dark {
-	--background: 0, 0, 0; /* Dark mode (black) */
-	--foreground: 255, 0, 0; /* Light text */
+	--background: 30, 30, 35; /* Dark mode (black) */
+	--foreground: 255, 255, 255; /* Light text */
 }
 
 body {

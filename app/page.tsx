@@ -12,63 +12,68 @@ export default function Home() {
 
 	if (!mounted) return null;
 	return (
-		<div className="min-h-screen p-8 pb-20 sm:p-20 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white">
+		<div className="min-h-screen pb-20 sm:p-0-10-10-10 text-white">
 			<main className="flex flex-col gap-8 items-center sm:items-start">
 				<div className="grid grid-cols-3 gap-4 w-full">
-					<div className="col-span-1">
-						<Avatar />
+					<div className="col-span-3 center p-3">
+						<p className="font-merriweather text-foreground text-left">
+							kondrat<span className="text-accent">.dev /</span>
+						</p>
 					</div>
-					<div className="col-span-2">
+					<div className="col-span-1">
+						<div className="aspect-square h-full w-full">
+							<Avatar />
+						</div>
+					</div>
+					<div className="col-span-2 flex flex-col justify-center">
 						<h1
-							className="text-8xl font-mono font-black text-center sm:text-left uppercase"
+							className="text-8xl font-merriweather font-black text-foreground text-center sm:text-left uppercase z-20"
 							style={{ textShadow: '10px 10px 0px black' }}
 						>
-							Hello! <br />I am Mykhailo
-							<span className="text-orange-500">.</span>
+							Hello! <br />I am
+							<br /> Mykhailo Kondrat
+							<span className="text-accent">.</span>
 						</h1>
-						<p className="text-lg font-merry text-center sm:text-left">
-							Software engineer with 5 years of experience, currently working at{' '}
-							<a href="https://www.ericsson.com" className="text-blue-400">
+					</div>
+					<div className="col-span-2 col-start-2 flex flex-col items-left z-20">
+						<p className="text-2xl font-merry text-foreground text-left my-5">
+							Passionate software engineer, former UI/UX designer. <br />
+							Currently working at{' '}
+							<a href="https://www.ericsson.com" className="text-accent">
 								Ericsson
 							</a>
 							.
 						</p>
 
-						<p className="text-lg text-center sm:text-left">
-							Check out my projects on
+						<div className="flex items-center gap-4 text-foreground mt-4">
 							<a
 								href="https://github.com/MykhailoKondrat"
-								className="text-blue-400"
+								className="text-accent hover:cursor-pointer"
 							>
 								<img
 									src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
 									alt="GitHub"
-									className="inline-block w-6 h-6 mr-2 invert"
+									className="inline-block w-6 h-6 invert"
 								/>
 							</a>
-						</p>
-						<a
-							href="/Mykhailo Kondrat resume.pdf"
-							download
-							className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-						>
-							Download Resume
-						</a>
+							<a
+								href="/Mykhailo Kondrat resume.pdf"
+								download
+								className="px-4 py-2 bg-background text-accent rounded-full hover:bg-accent hover:text-white hover:cursor-pointer border border-accent"
+							>
+								Download Resume
+							</a>
+
+							<a
+								href="mailto:mykhailo.kondrat@gmail.com"
+								className="px-4 py-2 bg-background text-accent rounded-full hover:bg-accent hover:text-white hover:cursor-pointer border border-accent"
+							>
+								Send me a message
+							</a>
+						</div>
 					</div>
 				</div>
-				<p className="text-lg text-center sm:text-left">
-					This website is still under construction.
-				</p>
-				<p className="text-lg text-center sm:text-left">
-					Feel free to reach out via email at
-					<a href="mailto:mykhailo.kondrat@gmail.com" className="text-blue-400">
-						mykhailo.kondrat@gmail.com
-					</a>
-					.
-				</p>
 			</main>
-
-			<footer className="flex gap-6 flex-wrap items-center justify-center"></footer>
 		</div>
 	);
 }
