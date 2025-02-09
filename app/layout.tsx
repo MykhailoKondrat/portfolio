@@ -20,7 +20,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="dark">
 			<body
-				className={`${merriweather.className} antialiased bg-background overflow-y-hidden`}
+				className={`${merriweather.className} antialiased bg-background overflow-y-hidden dark`}
 			>
 				<div className="max-w-[75%] w-[75%] mx-auto max-h-[100vh]">
 					<ThemeProvider>{children}</ThemeProvider>
