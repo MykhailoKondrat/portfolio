@@ -9,9 +9,14 @@ export default {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				mono: ['var(--font-geist-mono)'],
+				merry: ['var(--font-merriweather)'],
+			},
 			colors: {
 				background: 'rgb(var(--background))',
 				foreground: 'rgb(var(--foreground))',
+				accent: 'rgb(var(--accent))',
 			},
 		},
 	},
