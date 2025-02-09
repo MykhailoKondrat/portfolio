@@ -1,16 +1,7 @@
 'use client';
 import { Avatar } from '@/components';
-// import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { SocialIcon } from 'react-social-icons';
 export default function Home() {
-	// const { theme, setTheme } = useTheme();
-	const [mounted, setMounted] = useState(false);
-
-	useEffect(() => {
-		setMounted(true);
-	}, []);
-
-	if (!mounted) return null;
 	return (
 		<div className="min-h-screen pb-20 sm:p-0-10-10-10 text-white">
 			<main className="flex flex-col gap-8 items-center sm:items-start">
@@ -27,7 +18,7 @@ export default function Home() {
 					</div>
 					<div className="col-span-2 flex flex-col justify-center">
 						<h1
-							className="text-8xl font-merriweather font-black text-foreground text-center sm:text-left uppercase z-20"
+							className="text-7xl font-merriweather font-black text-foreground text-center sm:text-left uppercase z-20"
 							style={{ textShadow: '10px 10px 0px black' }}
 						>
 							Hello! <br />I am
@@ -37,7 +28,7 @@ export default function Home() {
 					</div>
 					<div className="col-span-2 col-start-2 flex flex-col items-left z-20">
 						<p className="text-2xl font-merry text-foreground text-left my-5">
-							Passionate software engineer, former UI/UX designer. <br />
+							Passionate software engineer and former UI/UX designer. <br />
 							Currently working at{' '}
 							<a href="https://www.ericsson.com" className="text-accent">
 								Ericsson
@@ -45,17 +36,17 @@ export default function Home() {
 							.
 						</p>
 
-						<div className="flex items-center gap-4 text-foreground mt-4">
-							<a
-								href="https://github.com/MykhailoKondrat"
-								className="text-accent hover:cursor-pointer"
-							>
-								<img
-									src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-									alt="GitHub"
-									className="inline-block w-6 h-6 invert"
-								/>
-							</a>
+						<div className="flex items-center gap-4 text-foreground mt-4 h-12">
+							<SocialIcon
+								url="https://github.com/MykhailoKondrat"
+								bgColor="rgb(249, 115, 22)"
+								style={{ height: 40, width: 40 }}
+							/>
+							<SocialIcon
+								url="https://www.linkedin.com/in/mykhailo-kondrat/"
+								bgColor="rgb(249, 115, 22)"
+								style={{ height: 40, width: 40 }}
+							/>
 							<a
 								href="/Mykhailo Kondrat resume.pdf"
 								download

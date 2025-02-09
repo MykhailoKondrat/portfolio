@@ -5,7 +5,9 @@
 @layer components {
 	.custom-avatar {
 		@apply relative rounded-full w-[30vw] h-[30vw] flex items-center justify-center z-10 bg-no-repeat bg-center bg-contain;
-		background-image: url('/avatar-no-bg.png');
+		background-image: url('/avatar-no-bg.png'),
+			linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+		max-width: 100%;
 	}
 	/* .custom-avatar-border {
 		@apply relative z-9 w-[calc(30vw+2px)] h-[calc(30vw+2px)] rounded-full bg-gradient-to-br from-purple-500 to-green-500 flex justify-center items-center;
@@ -17,5 +19,6 @@
 		position: absolute;
 		background: transparent;
 		border-radius: 100%;
+		/* max-width: 100%; */
 	}
 }
