@@ -7,8 +7,12 @@ export default {
 		'./components/**/*.{js,ts,jsx,tsx,mdx}',
 		'./app/**/*.{js,ts,jsx,tsx,mdx}',
 	],
+
 	theme: {
 		extend: {
+			screens: {
+				'max-lg': { max: '1023px' },
+			},
 			fontFamily: {
 				mono: ['var(--font-geist-mono)'],
 				merry: ['var(--font-merriweather)'],
