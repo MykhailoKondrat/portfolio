@@ -12,6 +12,12 @@ export const Links: React.FC = () => (
 				bgColor="rgb(249, 115, 22)"
 				style={{ height: 40, width: 40 }}
 			/>
+
+			<SocialIcon
+				url="https://www.upwork.com/freelancers/~010f165130d3091cba?mp_source=share"
+				bgColor="rgb(249, 115, 22)"
+				style={{ height: 40, width: 40 }}
+			/>
 		</div>
 		<div className="flex gap-4 w-full max-lg:flex-col max-lg:justify-center max-lg:align-center max-lg:text-center">
 			<a
