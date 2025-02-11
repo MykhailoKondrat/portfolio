@@ -16,8 +16,6 @@
 		@apply border border-opacity-40 w-[60vw] h-[60vw] absolute bg-transparent rounded-full;
 		border-color: rgba(var(--foreground), 0.4);
 		overflow: hidden;
-	
-		
 	}
 
 	@keyframes rotate {
@@ -40,5 +38,45 @@
 		pointer-events: none;
 		z-index: -1;
 		animation: rotate 400s linear infinite;
+	}
+	.grow-animation {
+		animation: grow 1s ease-in forwards;
+	}
+
+	@keyframes grow {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	.bounce-grow {
+		animation: bounce-grow 0.8s ease-in-out forwards;
+		animation-delay: 200ms;
+		opacity: 0;
+	}
+	.animation-delay-1 {
+		animation-delay: 100ms;
+	}
+	@keyframes bounce-grow {
+		0% {
+			opacity: 0;
+			transform: scale(0);
+		}
+		25% {
+			opacity: 0.25;
+			transform: scale(1.05);
+		}
+		50% {
+			opacity: 0.5;
+			transform: scale(0.95);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 }

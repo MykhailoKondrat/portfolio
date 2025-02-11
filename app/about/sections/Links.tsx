@@ -1,6 +1,6 @@
 import { SocialIcon } from 'react-social-icons';
 export const Links: React.FC = () => (
-	<div className="flex items-center gap-4 text-foreground mt-4 h-12 max-lg:flex-col max-lg:justify-center max-lg:align-center max-lg:mt-12">
+	<div className="animate-fadeIn delay-700 flex items-center gap-4 text-foreground mt-4 h-12 max-lg:flex-col max-lg:justify-center max-lg:align-center max-lg:mt-12">
 		<div className="flex gap-4">
 			<SocialIcon
 				url="https://github.com/MykhailoKondrat"
