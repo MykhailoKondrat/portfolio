@@ -4,20 +4,18 @@
 
 @layer components {
 	.custom-avatar {
-		@apply relative rounded-full w-[30vw] h-[30vw] flex items-center justify-center z-[5] bg-no-repeat bg-center bg-contain;
 		background-image: url('/avatar-no-bg.png'),
-			linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
-		max-width: 100%;
+			linear-gradient(
+				to bottom right,
+				rgba(0, 0, 0, 0.6),
+				rgba(62, 62, 62, 0.5)
+			);
 	}
-	/* .custom-avatar-border {
-		@apply relative z-9 w-[calc(30vw+2px)] h-[calc(30vw+2px)] rounded-full bg-gradient-to-br from-purple-500 to-green-500 flex justify-center items-center;
-	} */
 	.avatar-circle {
-		@apply border border-opacity-40 w-[60vw] h-[60vw] absolute bg-transparent rounded-full;
+		@apply border border-opacity-40 w-[60vw] h-[60vw] absolute bg-transparent rounded-full bg-background;
 		border-color: rgba(var(--foreground), 0.4);
 		overflow: hidden;
 	}
-
 	@keyframes rotate {
 		0% {
 			transform: rotate(0deg);
@@ -38,45 +36,5 @@
 		pointer-events: none;
 		z-index: -1;
 		animation: rotate 400s linear infinite;
-	}
-	.grow-animation {
-		animation: grow 1s ease-in forwards;
-	}
-
-	@keyframes grow {
-		0% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-	.bounce-grow {
-		animation: bounce-grow 0.8s ease-in-out forwards;
-		animation-delay: 200ms;
-		opacity: 0;
-	}
-	.animation-delay-1 {
-		animation-delay: 100ms;
-	}
-	@keyframes bounce-grow {
-		0% {
-			opacity: 0;
-			transform: scale(0);
-		}
-		25% {
-			opacity: 0.25;
-			transform: scale(1.05);
-		}
-		50% {
-			opacity: 0.5;
-			transform: scale(0.95);
-		}
-		100% {
-			opacity: 1;
-			transform: scale(1);
-		}
 	}
 }
