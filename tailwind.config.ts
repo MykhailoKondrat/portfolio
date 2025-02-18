@@ -75,15 +75,13 @@ export default {
 						transform: 'scale(0)',
 					},
 					'25%': {
-						opacity: '0.25',
 						transform: 'scale(1.05)',
 					},
 					'50%': {
-						opacity: '0.5',
 						transform: 'scale(0.95)',
 					},
 					'100%': {
-						opacity: '1',
+						opacity: '0.5',
 						transform: 'scale(1)',
 					},
 				},

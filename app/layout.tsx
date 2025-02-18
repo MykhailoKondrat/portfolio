@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Merriweather_Sans } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/core';
+import Link from 'next/link';
 
 const merriweather = Merriweather_Sans({
 	subsets: ['latin'],
@@ -28,9 +29,15 @@ export default function RootLayout({
 							</p>
 							<nav className="self-end">
 								<ul className="flex space-x-8">
-									<li>About</li>
-									<li>My projects</li>
-									<li>Playground</li>
+									<li>
+										<Link href="/about">About</Link>
+									</li>
+									<li>
+										<Link href="/projects">My projects</Link>
+									</li>
+									<li>
+										<Link href="/playground">Playground</Link>
+									</li>
 								</ul>
 							</nav>
 						</div>
