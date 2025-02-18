@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Merriweather_Sans } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/core';
+import Link from 'next/link';
 
 const merriweather = Merriweather_Sans({
 	subsets: ['latin'],
@@ -19,12 +20,30 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="dark">
-			<body
-				className={`${merriweather.className} antialiased bg-background overflow-y-hidden dark`}
-			>
-				<div className="max-w-[75%] w-[75%] mx-auto max-h-[100vh]">
-					<ThemeProvider>{children}</ThemeProvider>
-				</div>
+			<body className={`${merriweather.className} antialiased dark`}>
+				<ThemeProvider>
+					<main className="flex flex-col items-start">
+						<div className="bg-none center p-3 z-[6] fixed flex w-full justify-between">
+							<p className="font-merriweather text-foreground text-left max-lg:text-center">
+								kondrat<span className="text-accent">.dev /</span>
+							</p>
+							<nav className="self-end">
+								<ul className="flex space-x-8">
+									<li>
+										<Link href="/about">About</Link>
+									</li>
+									<li>
+										<Link href="/projects">My projects</Link>
+									</li>
+									<li>
+										<Link href="/playground">Playground</Link>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						{children}
+					</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
