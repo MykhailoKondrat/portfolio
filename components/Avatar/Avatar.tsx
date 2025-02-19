@@ -4,9 +4,9 @@ import './Avatar.css';
 
 export const Avatar: React.FC = () => (
 	<>
-		<div className="pointer-events-none absolute z-[6] flex justify-center items-center w-[calc(30vw+2px)] h-[calc(30vw+2px)]">
+		<div className="pointer-events-none animate-fadeInBlurScale absolute z-[6] flex justify-center items-center w-[calc(30vw+2px)] h-[calc(30vw+2px)]">
 			<div
-				className="animate-fadeIn opacity-0 animation-delay-400 custom-avatar z-[5] bg-background bg-center bg-contain bg-no-repeat flex h-[30vw] 
+				className=" animation-delay-400 custom-avatar z-[5] bg-background bg-center bg-contain bg-no-repeat flex h-[30vw] 
 			items-center justify-center overflow-hidden relative rounded-full 
 			w-[30vw] shadow-sm"
 			/>

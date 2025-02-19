@@ -14,6 +14,10 @@ export default {
 				fadeIn: 'fadeIn 1s ease-in-out forwards',
 				grow: 'grow 0.5s ease-in-out forwards',
 				bounceGrow: 'bounce-grow 0.8s ease-in-out forwards',
+				blurIn: 'blurIn 1s ease-in-out forwards',
+				scaleDownIn: 'scaleDownIn 0.5s ease-in-out forwards',
+				fadeInBlurScale:
+					'fadeIn 0.5s ease-in-out forwards, blurIn 0.5s ease-in-out forwards, scaleDownIn 0.5s ease-in-out forwards',
 			},
 			animationDelay: {
 				'0': '0s',
@@ -58,6 +62,14 @@ export default {
 				fadeIn: {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' },
+				},
+				blurIn: {
+					'0%': { filter: 'blur(10px)' },
+					'100%': { filter: 'blur(0px)' },
+				},
+				scaleDownIn: {
+					'0%': { transform: 'scale(1.1)' },
+					'100%': { transform: 'scale(1)' },
 				},
 				grow: {
 					'0%': {
