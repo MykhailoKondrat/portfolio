@@ -1,6 +1,7 @@
 import { Avatar } from '@/components';
 import { Description, Headline } from './sections';
 import { Links } from './sections/Links';
+import { Circles } from '@/components/Circles';
 export default function About() {
 	return (
 		<div className="group [max-h-[100vh] overflow-y-hidden h-[100vh] w-full pt-40">
@@ -10,6 +11,7 @@ export default function About() {
 						<div className="col-span-1 max-lg:col-start-2 max-lg:place-self-center ">
 							<div className="aspect-square h-full w-full">
 								<Avatar />
+								<Circles />
 							</div>
 						</div>
 						<Headline />
