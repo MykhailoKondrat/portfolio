@@ -16,6 +16,8 @@ export default {
 				bounceGrow: 'bounce-grow 0.8s ease-in-out forwards',
 				blurIn: 'blurIn 1s ease-in-out forwards',
 				scaleDownIn: 'scaleDownIn 0.5s ease-in-out forwards',
+				scaleWidthIn: 'scaleWidth 0.3s ease-in-out forwards',
+				scaleWidthOut: 'scaleWidth 0.3s ease-in-out reverse forwards',
 				fadeInBlurScale:
 					'fadeIn 0.5s ease-in-out forwards, blurIn 0.5s ease-in-out forwards, scaleDownIn 0.5s ease-in-out forwards',
 			},
@@ -59,6 +61,14 @@ export default {
 				mono: ['var(--font-geist-mono)'],
 			},
 			keyframes: {
+				scaleWidth: {
+					'0%': {
+						transform: 'scaleX(0)',
+					},
+					' 100%': {
+						transform: 'scaleX(1)',
+					},
+				},
 				fadeIn: {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' },
@@ -111,6 +121,9 @@ export default {
 				utilities[`.animation-delay-${key}`] = { 'animation-delay': value };
 				utilities[`.animate-grow-${key}`] = {
 					animation: `grow ${value} ease-in-out forwards`,
+				};
+				utilities[`.animate-scaleWidthIn-${key}`] = {
+					animation: `scaleWidth ${value} ease-in-out forwards`,
 				};
 			});
 			addUtilities(utilities, ['responsive']);
