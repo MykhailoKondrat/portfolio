@@ -6,10 +6,9 @@ import Tilt from 'react-parallax-tilt';
 export const Circles: React.FC = () => (
 	<Tilt
 		className="relative z-[5] hover-group "
-		tiltMaxAngleX={5}
-		tiltMaxAngleY={5}
-		perspective={1000}
-		scale={1.05}
+		tiltMaxAngleX={10}
+		tiltMaxAngleY={10}
+		perspective={1500}
 	>
 		<div className="relative flex justify-center items-center w-[calc(30vw+2px)] h-[calc(30vw+2px)]">
 			<div className="animate-grow animate-blurIn avatar-circle  z-[3]  w-[48vw] h-[48vw] shadow-md" />
