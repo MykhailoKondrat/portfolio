@@ -1,5 +1,5 @@
 export const Headline: React.FC = () => (
-	<div className=" col-span-2 flex flex-col justify-center max-lg:col-span-3">
+	<div className=" pointer-events-none col-span-2 flex flex-col justify-center max-lg:col-span-3">
 		<h1
 			className="animate-fadeInBlurScale opacity-0 animation-delay-700 text-8xl font-merriweather font-black text-foreground text-center sm:text-left uppercase z-20 max-lg:text-center max-lg:text-4xl"
 			style={{
